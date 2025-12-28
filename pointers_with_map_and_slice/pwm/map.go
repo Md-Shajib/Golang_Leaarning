@@ -2,7 +2,7 @@ package pwm
 
 import "fmt"
 
-func MapDeclaration(){
+func MapDeclarationAndOperation(){
 	// Basic map declaration with a literal
 	var map1 map[string]int = map[string]int{
 		"apple": 5,
@@ -41,4 +41,5 @@ func MapDeclaration(){
 	for key, val := range map1 {
 		fmt.Println(key, "=>", val)
 	}
+	fmt.Println("========================End of MAP=======================")
 }
