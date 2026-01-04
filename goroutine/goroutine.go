@@ -35,4 +35,8 @@ func mainPrint() {
 ****************Compile Phase***************
 go build main.go => compile it => ./main (Main name akta file create hobe)
 
+b = 20
+printSomething
+mainPrint
+
 */

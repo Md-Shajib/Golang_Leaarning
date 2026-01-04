@@ -14,5 +14,4 @@ func Pointers() {
 	// fmt.Println("i = ",i , " j = ",j)
 	// defer_test()
 	// embedding_main()
-	mainPrint()
 }

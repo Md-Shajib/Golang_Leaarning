@@ -1,6 +1,7 @@
 package paymentinterface
 
 import (
+	"fmt"
 	"go-basic/payment_interface/internal/gateway"
 	"go-basic/payment_interface/internal/logger"
 	"go-basic/payment_interface/internal/payment"
@@ -25,4 +26,6 @@ func PaymantCmd(){
 	paymentService := service.NewPaymentService(gateway, deps)
 
 	paymentService.ProcessPayment(1000, "USD")
+
+	fmt.Println("=====================End of Example===================")
 }
