@@ -1,32 +1,54 @@
 package interfaces
 
-import (
-	"fmt"
-)
+import "fmt"
 
-type Animal interface {
-	Speak() string
+type AllUser interface {
+	ViewDetails() 
 }
 
-type Dog struct { name string }
-type Cat struct { name string }
-
-func (d Dog) Speak() {
-	fmt.Println(d.name, "speak owhh!")
+type User struct {
+	name string
+	age float32
+	address string
 }
 
-func (c Cat) Speak() {
-	fmt.Println(c.name, "speak meow!")
+type PremiumUser struct{
+	User
+	subscriptionType string
+	amount float32
+	from string
+	since string
 }
 
-func MakeSound(a Animal) {
-	fmt.Println(a.Speak())
+func (u User) ViewDetails(){
+	fmt.Println("-----------User Details-------------")
+	fmt.Println("Name: ", u.name)
+	fmt.Println("Age: ", u.age)
+	fmt.Println("Address: ", u.address)
 }
 
-func InterfaceExample() {
-	dog := Dog{name: "Baymax"}
-	dog.Speak()
+func (p PremiumUser) ViewDetails() {
+	fmt.Println("-----------Premium User Details--------------")
+	p.User.ViewDetails()
+	fmt.Println("Subscription Type: ",p.subscriptionType)
+	fmt.Println("Amount: ", p.amount)
+	fmt.Println("From: ", p.from, "to ", p.since)
+}
 
-	cat := Cat{name: "pinky"}
-	cat.Speak()
+func View(a AllUser){
+	a.ViewDetails()
+}
+
+func InterfaceExample(){
+	user1 := User{name: "Shajib", age: 26, address: "Dhaka"}
+	View(user1)
+
+	user2 := PremiumUser{
+		User: user1,
+		subscriptionType: "Monthly", 
+		amount: 10.99, 
+		from: "January", 
+		since: "April",
+	}
+	View(user2)
 }
