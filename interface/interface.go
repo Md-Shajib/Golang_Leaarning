@@ -51,4 +51,6 @@ func InterfaceExample(){
 		since: "April",
 	}
 	View(user2)
+	EmptyInterface()
+	EmbeddingMain()
 }
