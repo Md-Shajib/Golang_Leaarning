@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"go-basic/generics"
 	interfaces "go-basic/interface"
 	paymentinterface "go-basic/payment_interface"
 	"go-basic/pointers_with_map_and_slice/pwm"
@@ -12,4 +13,5 @@ func Serve(){
 	pws.SliceDeclarationAndOperation()
 	paymentinterface.PaymantCmd()
 	interfaces.InterfaceExample()
+	generics.GenericsFunction()
 }
