@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	errorhandling "go-basic/error_handling"
 	"go-basic/generics"
 	interfaces "go-basic/interface"
 	paymentinterface "go-basic/payment_interface"
@@ -14,4 +15,5 @@ func Serve(){
 	paymentinterface.PaymantCmd()
 	interfaces.InterfaceExample()
 	generics.GenericsFunction()
+	errorhandling.ErrorMain()
 }
