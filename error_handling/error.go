@@ -26,3 +26,9 @@ func ErrorMain() {
 		fmt.Println(result)
 	}
 }
+
+// Need to learn more about error handling
+
+func Need() string {
+	return "Hi"
+}
